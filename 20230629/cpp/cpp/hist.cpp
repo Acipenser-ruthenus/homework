@@ -192,7 +192,7 @@ int main() {
 
     //drawHistogramFliter(filteredValuesXMean, "x_Mean_step_3"); // 绘制均值滤波的直方图
     //drawHistogramFliter(filteredValuesXMedian, "x_Median_step_3_M"); // 绘制中值滤波的直方图
-    drawHistogramFliter(filteredValuesXMMM3, "x_MMM"); // 绘制1中值2均值的直方图
+    drawHistogramFliter(filteredValuesXMMM3, "x_MMM"); // 绘制1次中值2次均值滤波后的直方图
 
 
     waitKey(0);
