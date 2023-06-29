@@ -122,6 +122,8 @@ void drawHistogramFliter(const vector<int>& histogram, const string& label) {
 // 直方图均值滤波函数
 vector<int> meanFilter(const vector<int>& values, int step) {
     int size = values.size();
+    step = int(step / 2);
+    
     vector<int> filteredValues(size, 0);
 
     // 滤波
@@ -160,7 +162,7 @@ vector<int> medianFilter(const vector<int>& values, int windowSize) {
         sort(window.begin(), window.end());
 
         // 取中值作为滤波后的值
-        filteredValues[i] = window[windowSize / 2];
+        filteredValues[i] = window[window.size() / 2];
     }
 
     return filteredValues;
