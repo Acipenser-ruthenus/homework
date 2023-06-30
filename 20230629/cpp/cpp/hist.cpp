@@ -56,7 +56,7 @@ void drawHistogram(const vector<int>& values, const string& label) {
     const int rangeMin = 0;   // 直方图范围最小值
     const int rangeMax = 255;  // 直方图范围最大值
 
-    vector<int> histogram(histSize, 0); // 存储直方图数据的数组，初始值为0
+    vector<int> histogram(histSize+1, 0); // 存储直方图数据的数组，初始值为0
     double binWidth = static_cast<double>(rangeMax - rangeMin) / histSize; // 计算每个条目的宽度
 
     for (int value : values) { // 遍历数据数组
@@ -172,8 +172,8 @@ int main() {
     vector<int> x_values;
     vector<int> y_values;
     vector<int> z_values;
-    vector<int> x_histogram(255,0);
-    vector<int> y_histogram(255,0);
+    vector<int> x_histogram(256,0);
+    vector<int> y_histogram(256,0);
 
 
     readCSV("C:/Users/U/Desktop/1(1).csv", x_values, y_values, z_values, x_histogram, y_histogram); // 读取CSV文件
